@@ -32,4 +32,20 @@ public class Student {
   public boolean isActivate() {
     return activated;
   }
+
+  public void activate() {
+    if (activated) {
+      throw new IllegalArgumentException("이미 활성화되어있는 학생입니다.");
+    }
+
+    this.activated = true;
+  }
+
+  public void deactivate() {
+    if (!activated) {
+      throw new IllegalArgumentException("이미 비활성화되어있는 학생입니다.");
+    }
+
+    this.activated = false;
+  }
 }
